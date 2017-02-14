@@ -31,19 +31,19 @@ from sklearn.naive_bayes import GaussianNB
 
 clf = GaussianNB()
 t0 = time()
-print "training time:", round(time()-t0, 3), "s"
+print "Training time:", round(time()-t0, 3), "s"
 clf.fit(features_train, labels_train)
-print "training time:", round(time()-t0, 3), "s"
+print "Training time:", round(time()-t0, 3), "s"
 
-print "Test time:", round(time()-t0, 3), "s"
+print "Testing time:", round(time()-t0, 3), "s"
 clf.predict(features_test)
-print "Test time:", round(time()-t0, 3), "s"
+print "Testing time:", round(time()-t0, 3), "s"
 
 print "Estimate accuracy time:", round(time()-t0, 3), "s"
-score = clf.score(features_test, labels_test)
+accuracy = clf.score(features_test, labels_test)
 print "Estimate accuracy time:", round(time()-t0, 3), "s"
 
-print "Accuracy is : {0}".format(score*100);
+print "Accuracy is : {0}".format(accuracy*100);
 
 #########################################################
 
